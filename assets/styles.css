@@ -23,18 +23,20 @@ p {
 }
 
 .header {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  text-align: center;
   font-size: 2em;
   padding: 0.5em;
   margin-top: 0.5em;
 }
 
 .subheader {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  text-align: center;
   font-size: 1.5em;
   margin-bottom: 0.5em;
 }
