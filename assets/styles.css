@@ -60,6 +60,7 @@ p {
 }
 
 .randomize {
+  -webkit-appearance: none;
   width: 14em;
   height: 2.3em;
 }
