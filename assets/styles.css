@@ -13,6 +13,7 @@ label {
 input[type="text"] {
   padding: 0.5em;
   width: 12em;
+  font-size: max(1em, 16px);
 }
 
 p {
@@ -28,7 +29,7 @@ p {
   display: flex;
   flex-direction: column;
   text-align: center;
-  font-size: 2em;
+  font-size: 2.3em;
   padding: 0.5em;
   margin-top: 0.5em;
 }
@@ -38,7 +39,7 @@ p {
   display: flex;
   flex-direction: column;
   text-align: center;
-  font-size: 1.5em;
+  font-size: 1.6em;
   margin-bottom: 0.5em;
 }
 
@@ -60,4 +61,5 @@ p {
 
 .randomize {
   width: 14em;
+  height: 2.3em;
 }
