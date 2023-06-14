@@ -8,7 +8,7 @@ function randomValueFromArray(array) {
   return array[random];
 }
 
-const storyText = "It was 94 fahrenheit outside, so :insertx: went for a walk. When they got to :inserty:, they stared in horror for a few moments, then :insertz:. Bob saw the whole thing, but was not surprised — :insertx: weighs 300 pounds, and it was a hot day."
+const storyText = "It was 94 degrees outside, so :insertx: went for a walk. When they got to :inserty:, they stared in horror for a few moments, then :insertz:. Bob saw the whole thing, but was not surprised — :insertx: weighs 300 pounds, and it was a hot day."
 const insertX = ["Willy the Goblin", "Big Daddy", "Father Christmas"]
 const insertY = ["the soup kitchen", "Disneyland", "the White House"]
 const insertZ = ["spontaneously combusted", "melted into a puddle on the sidewalk", "turned into a slug and crawled away"]
@@ -25,13 +25,11 @@ function result() {
   if (customName.value !== "") {
     const name = customName.value
     newStory = newStory.replace("Bob", name)
-    console.log(customName2 + "1")
   }
 
   if (customName2.value !== "") {
     const name2 = customName2.value
-    newStory = newStory.replace(":insertx:", name2)
-    console.log(customName2)
+    newStory = newStory.replace(xItem, name2).replace(xItem, name2)
   }
 
   if (document.getElementById("est").checked) {
