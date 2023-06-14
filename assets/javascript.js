@@ -37,7 +37,7 @@ function result() {
     newStory = newStory.replace(xItemEng, name2).replace(xItemEng, name2)
   }
 
-  story.textContent = newStory
+  story.textContent = newStory.focus()
   story.style.visibility = "visible"
 
   } else if (document.getElementById("est").checked) {
@@ -57,7 +57,7 @@ function result() {
     newStory = newStory.replace(xItemEst, name2).replace(xItemEst, name2)
   }
 
-    story.textContent = newStory
+    story.textContent = newStory.focus()
     story.style.visibility = "visible"
   }
 }
