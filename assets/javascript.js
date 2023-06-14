@@ -9,7 +9,7 @@ function randomValueFromArray(array) {
 }
 
 const storyTextEng = "It was 94 degrees outside, so :insertx: went for a walk. When they got to :inserty:, they stared in horror for a few moments, then :insertz:. Bob saw the whole thing, but was not surprised — :insertx: weighs 300 pounds, and it was a hot day."
-const storyTextEst = "Õues oli 30 kraadi sooja ning :insertx: otsustas jalutama minna. Peale :inserty: jõudmist jäi ta aga ehmunult mõttesse ning :insertz:. Juku nägi seda kõike pealt, kuid ei olnud sugugi üllatunud — :insertx: kaalus üle 120 kilo, ja ilm oli väga palav."
+const storyTextEst = "Õues oli 30 kraadi sooja ning :insertx: otsustas oma piiritus tarkuses jalutama minna. Peale :inserty: jõudmist jäi ta aga ehmunult mõttesse ning :insertz:. Juku nägi seda kõike pealt, kuid ei olnud sugugi üllatunud — :insertx: kaalus üle 120 kilo, ja ilm oli väga palav."
 const insertXEng = ["Willy the Goblin", "Big Daddy", "Father Christmas"]
 const insertYEng = ["the soup kitchen", "Disneyland", "the White House"]
 const insertZEng = ["spontaneously combusted", "melted into a puddle on the sidewalk", "turned into a slug and crawled away"]
