@@ -8,19 +8,24 @@ function randomValueFromArray(array) {
   return array[random];
 }
 
-const storyText = "It was 94 degrees outside, so :insertx: went for a walk. When they got to :inserty:, they stared in horror for a few moments, then :insertz:. Bob saw the whole thing, but was not surprised — :insertx: weighs 300 pounds, and it was a hot day."
-const insertX = ["Willy the Goblin", "Big Daddy", "Father Christmas"]
-const insertY = ["the soup kitchen", "Disneyland", "the White House"]
-const insertZ = ["spontaneously combusted", "melted into a puddle on the sidewalk", "turned into a slug and crawled away"]
+const storyTextEng = "It was 94 degrees outside, so :insertx: went for a walk. When they got to :inserty:, they stared in horror for a few moments, then :insertz:. Bob saw the whole thing, but was not surprised — :insertx: weighs 300 pounds, and it was a hot day."
+const storyTextEst = "Õues oli 30 kraadi sooja ning :insertx: otsustas jalutama minna. Peale :inserty: jõudmist jäi ta aga ehmunult mõttesse ning seejärel :insertz:. Juku nägi seda kõike pealt, kuid ei olnud sugugi üllatunud — :insertx: kaalus üle 120 kilo, ja ilm oli väga palav."
+const insertXEng = ["Willy the Goblin", "Big Daddy", "Father Christmas"]
+const insertYEng = ["the soup kitchen", "Disneyland", "the White House"]
+const insertZEng = ["spontaneously combusted", "melted into a puddle on the sidewalk", "turned into a slug and crawled away"]
+const insertXEst = ["paharet Villu", "Paks Margareeta", "Jõuluvana"]
+const insertYEst = ["supikööki", "Disneylandi", "Valgesse Majja"]
+const insertZEst = ["läks iseenesest põlema", "sulas tee peal ära", "muutus ühtäkki prussakaks ja jooksis minema"]
 
 randomize.addEventListener("click", result)
 
 function result() {
-  let newStory = storyText
-  let xItem = randomValueFromArray(insertX)
-  let yItem = randomValueFromArray(insertY)
-  let zItem = randomValueFromArray(insertZ)
-  newStory = newStory.replace(":insertx:", xItem).replace(":inserty:", yItem).replace(":insertz:", zItem).replace(":insertx:", xItem)
+  if (document.getElementById("eng").checked) {
+  let newStory = storyTextEng
+  let xItemEng = randomValueFromArray(insertXEng)
+  let yItemEng = randomValueFromArray(insertYEng)
+  let zItemEng = randomValueFromArray(insertZEng)
+  newStory = newStory.replace(":insertx:", xItemEng).replace(":inserty:", yItemEng).replace(":insertz:", zItemEng).replace(":insertx:", xItemEng)
 
   if (customName.value !== "") {
     const name = customName.value
@@ -29,15 +34,30 @@ function result() {
 
   if (customName2.value !== "") {
     const name2 = customName2.value
-    newStory = newStory.replace(xItem, name2).replace(xItem, name2)
-  }
-
-  if (document.getElementById("est").checked) {
-    const weight = Math.round(300)
-    const temperature =  Math.round(94)
-
+    newStory = newStory.replace(xItemEng, name2).replace(xItemEng, name2)
   }
 
   story.textContent = newStory
   story.style.visibility = "visible"
+
+  } else if (document.getElementById("est").checked) {
+    let newStory = storyTextEst
+    let xItemEst = randomValueFromArray(insertXEst)
+    let yItemEst = randomValueFromArray(insertYEst)
+    let zItemEst = randomValueFromArray(insertZEst)
+    newStory = newStory.replace(":insertx:", xItemEst).replace(":inserty:", yItemEst).replace(":insertz:", zItemEst).replace(":insertx:", xItemEst)
+
+  if (customName.value !== "") {
+    const name = customName.value
+    newStory = newStory.replace("Juku", name)
+  }
+
+  if (customName2.value !== "") {
+    const name2 = customName2.value
+    newStory = newStory.replace(xItemEst, name2).replace(xItemEst, name2)
+  }
+
+    story.textContent = newStory
+    story.style.visibility = "visible"
+  }
 }
