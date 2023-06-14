@@ -61,7 +61,9 @@ p {
 
 .randomize {
   -webkit-appearance: none;
+  font-size: max(1em, 16px);
   width: 14em;
   height: 2.3em;
   border-radius: 0.5em;
+  border-color: darkgray;
 }
